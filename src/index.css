@@ -1,0 +1,68 @@
+/* Tailwind's three required layers — do not remove any of them */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ── Global body ─────────────────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;  /* Sharper text on Mac/iOS */
+  -moz-osx-font-smoothing: grayscale;   /* Sharper text on Firefox/Mac */
+  margin: 0;
+  min-height: 100vh;
+  /* Same color as App.tsx background — prevents a white flash before React loads */
+  background-color: #f8f8f8;
+}
+
+
+/* ── Custom scrollbar ────────────────────────────────────────────────────── */
+/*
+ * Used in DetailPanel.tsx via class="custom-scrollbar".
+ * The webkit rules apply to Chrome, Edge and Safari.
+ * Firefox ignores them and uses its default scrollbar style.
+ * "overscroll-behavior: contain" stops the page behind the panel
+ * from scrolling when the panel content hits the top or bottom.
+ */
+.custom-scrollbar {
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch; /* Smooth momentum scrolling on iOS */
+}
+
+.custom-scrollbar::-webkit-scrollbar       { width: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #c4c4c4; border-radius: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+
+
+/* ── Animation: panelSlide ───────────────────────────────────────────────── */
+/* Used in DetailPanel.tsx — slides the panel in from the right */
+@keyframes panelSlide {
+  from { opacity: 0.5; transform: translateX(100%); }
+  to   { opacity: 1;   transform: translateX(0); }
+}
+
+
+/* ── Animation: modalFadeIn ──────────────────────────────────────────────── */
+/* Used in CentralNodeModal.tsx — fades and scales the modal in */
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
+/* ── Animation: bounce (override) ───────────────────────────────────────── */
+/*
+ * Used in DetailPanel.tsx on the "Scroll for more" indicator.
+ * Overrides Tailwind's default bounce with a smaller 4px movement
+ * so it is subtle and does not distract from the panel content.
+ */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-4px); }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s ease-in-out infinite;
+}
