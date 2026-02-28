@@ -1,0 +1,16 @@
+# Dependencies — run "npm install" to restore
+node_modules/
+
+# Production build — run "npm run build" to restore
+dist/
+
+# Environment variables — may contain secrets
+.env
+.env.local
+.env.development
+.env.production
+
+# Editor and OS files
+.DS_Store
+.vscode/
+*.log
