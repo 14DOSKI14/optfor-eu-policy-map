@@ -70,14 +70,18 @@ No backend. No database. The entire application compiles to three static files.
 ```
 src/
 ├── components/
-│   ├── decorations/           # Wave decorations between sections
+│   ├── decorations/
+│   │   ├── GreenWaveDecoration.tsx
+│   │   └── PurpleWaveDecoration.tsx
+│   ├── index.ts               # Exports all components
 │   ├── App.tsx                # Root layout and state
 │   ├── Header.tsx             # Top bar and logo
 │   ├── Footer.tsx             # Site footer
+│   ├── CentralNode.tsx        # The center node on the map
+│   ├── CentralNodeModal.tsx   # Center node popup
 │   ├── PolicyMap.tsx          # The interactive map
 │   ├── PolicyDomainBox.tsx    # Clickable domain boxes
 │   ├── DetailPanel.tsx        # Right-side detail panel
-│   ├── CentralNodeModal.tsx   # Center node popup
 │   ├── Legend.tsx             # Symbol key
 │   ├── PolicyGoalItem.tsx     # Goal row in detail panel
 │   └── PolicyDocumentItem.tsx # Document row in detail panel
