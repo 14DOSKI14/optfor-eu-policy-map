@@ -13,4 +13,4 @@ dist/
 # Editor and OS files
 .DS_Store
 .vscode/
-*.log
+*.log**/.DS_Store
