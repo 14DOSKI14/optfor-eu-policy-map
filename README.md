@@ -15,6 +15,20 @@
 
 ---
 
+## Certificate of Contribution
+
+This project was completed as part of the OptFor-EU research initiative. The work has been formally recognized by the project lead at the University of South-Eastern Norway (USN).
+
+> Issued by Marius Rohde Johannessen, Associate Professor of IT and Information Systems, USN — Project Manager at USN in OptFor-EU.
+
+[Download Certificate (PDF)](docs/Certificate.pdf)
+
+<img src="docs/certificate-1.png" width="480" />
+<img src="docs/certificate-2.png" width="480" />
+<img src="docs/certificate-3.png" width="480" />
+
+---
+
 ## What is this?
 
 This application is an interactive visualization tool developed for the **OptFor-EU** project — a European Union Horizon Europe research initiative focused on optimizing forest ecosystem resilience strategies across Europe.
@@ -70,9 +84,7 @@ No backend. No database. The entire application compiles to three static files.
 ```
 src/
 ├── components/
-│   ├── decorations/
-│   │   ├── GreenWaveDecoration.tsx
-│   │   └── PurpleWaveDecoration.tsx
+│   ├── decorations/           # Wave decorations between sections
 │   ├── index.ts               # Exports all components
 │   ├── App.tsx                # Root layout and state
 │   ├── Header.tsx             # Top bar and logo
@@ -96,13 +108,83 @@ src/
 
 ---
 
-## Build for production
+## Using this project
+
+### Option A — I just want to put it on a website (no code editing)
+
+This gives you three ready-to-deploy files. No Node.js or development tools required.
+
+**Step 1** — Download the ZIP from GitHub
+
+Go to [github.com/14DOSKI14/optfor-eu-policy-map](https://github.com/14DOSKI14/optfor-eu-policy-map), click **Code → Download ZIP** and unzip it.
+
+**Step 2** — Install Node.js if you do not have it
+
+Download from [nodejs.org](https://nodejs.org) (version 18 or higher).
+
+**Step 3** — Open a terminal in the project folder and run:
+
+```bash
+npm install
+npm run build
+```
+
+**Step 4** — Upload the contents of the `dist/` folder to your web server:
+
+```
+dist/
+├── index.html
+├── assets/index-[hash].js
+└── assets/index-[hash].css
+```
+
+These three files are all that is needed. Upload them to your server and the application is live.
+
+---
+
+### Option B — I want to edit the code and customize it
+
+This gives you the full source code to modify and rebuild.
+
+**Step 1** — Download the ZIP from GitHub
+
+Go to [github.com/14DOSKI14/optfor-eu-policy-map](https://github.com/14DOSKI14/optfor-eu-policy-map), click **Code → Download ZIP** and unzip it.
+
+Or clone it directly:
+```bash
+git clone https://github.com/14DOSKI14/optfor-eu-policy-map.git
+cd optfor-eu-policy-map
+```
+
+**Step 2** — Install dependencies:
+
+```bash
+npm install
+```
+
+**Step 3** — Start the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to see it running locally.
+
+**Step 4** — Make your changes.
+
+All policy content (text, links, descriptions) is in one file:
+```
+src/data/policyData.ts
+```
+Edit only that file to update any content without touching the rest of the code.
+
+**Step 5** — Build for production when done:
 
 ```bash
 npm run build
 ```
 
-Output goes to `dist/` — three optimized files ready for any web server.
+Upload the three files from `dist/` to your web server.
 
 ---
 
