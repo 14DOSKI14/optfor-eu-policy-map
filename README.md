@@ -154,7 +154,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) to see it running locally.
+Open the URL shown in the terminal to see it running locally (http://localhost:****/).
 
 **Step 4** — Make your changes.
 
