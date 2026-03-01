@@ -7,4 +7,3 @@ docs/                   export-ignore
 .gitignore              export-ignore
 .gitattributes          export-ignore
 package-lock.json       export-ignore
-tsconfig.node.json      export-ignore
