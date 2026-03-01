@@ -19,8 +19,6 @@
 
 This project was completed as part of the OptFor-EU research initiative. The work has been formally recognized by the project lead at the University of South-Eastern Norway (USN).
 
-> Issued by Marius Rohde Johannessen, Associate Professor of IT and Information Systems, USN — Project Manager at USN in OptFor-EU.
-
 [Download Certificate (PDF)](docs/Certificate.pdf)
 
 <img src="docs/certificate-1.png" width="480" />
