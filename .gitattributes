@@ -1,0 +1,10 @@
+# Files and folders listed here are excluded from GitHub's ZIP download.
+# They exist in the repo for documentation purposes but are not needed
+# by anyone who just wants to run or deploy the application.
+
+docs/                   export-ignore
+.hintrc                 export-ignore
+.gitignore              export-ignore
+.gitattributes          export-ignore
+package-lock.json       export-ignore
+tsconfig.node.json      export-ignore
