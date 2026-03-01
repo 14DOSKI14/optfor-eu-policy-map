@@ -15,18 +15,6 @@
 
 ---
 
-## Certificate of Contribution
-
-This project was completed as part of the OptFor-EU research initiative. The work has been formally recognized by the project lead at the University of South-Eastern Norway (USN).
-
-[Download Certificate (PDF)](docs/Certificate.pdf)
-
-<img src="docs/certificate-1.png" width="480" />
-<img src="docs/certificate-2.png" width="480" />
-<img src="docs/certificate-3.png" width="480" />
-
----
-
 ## What is this?
 
 This application is an interactive visualization tool developed for the **OptFor-EU** project — a European Union Horizon Europe research initiative focused on optimizing forest ecosystem resilience strategies across Europe.
